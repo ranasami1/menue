@@ -1,0 +1,7 @@
+.menue .container{
+    display: flex;
+    justify-content: space-around;
+    max-width: 90%;
+    flex-wrap: wrap;
+    margin: auto;
+}

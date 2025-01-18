@@ -1,0 +1,31 @@
+.container-recipe {
+    margin: auto;
+    padding: 10px;
+    position: absolute;
+    top: 160px;
+    position: fixed;
+}
+.container-recipe .recipe{
+    background-color:hsla(220, 5%, 23%, 0.781);
+    max-width: 500px;
+    height: 500px;
+    color:var(--mainText);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 20px;
+}
+.container .recipe .container-text{
+    overflow-y: scroll;
+    
+}
+.container .close{
+    width: 30px;
+    position: relative;
+}
+.container .close:hover{
+    cursor: pointer;
+}
