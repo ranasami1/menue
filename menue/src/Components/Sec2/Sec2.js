@@ -1,21 +1,20 @@
 import { useContext, useEffect, useState } from 'react';
-import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Sec2.css';
 import { Link } from 'react-router-dom';
 import { Spiner } from '../spinner/spinner';
 import  { AppContext } from "../../App";
+import axios from 'axios';
 export function Sec2(){
     const {setLoading,loading,filterFunction} = useContext(AppContext) ;
-    const [meal,setMeal] = useState([])
+    const [meal,setMeal] = useState()
+
     function Categories(){
-        axios.get("https://www.themealdb.com/api/json/v1/1/categories.php")
-        .then((response)=>{setMeal(response.data.categories);
-            console.log(meal);
-            setLoading(false);
-        })
-    }
+    axios.get('https://rolllandscoffee.com/rjs/items.json')
+    .then ((res)=>setMeal(res.data[0]))
+    console.log(meal);
+}
     useEffect(() =>{
         Categories();
     },[])
@@ -23,13 +22,12 @@ export function Sec2(){
        <div className='Container'>
         <h1 className='title tracking-in-expand'>Categories</h1>
         <div className='category d-flex'>
-            {loading?<Spiner/>:meal.slice(0,12).map((item,key)=>{
+            {loading?<Spiner/>:meal.map((item,key)=>{
                 return(
                 <Card key={key} style={{ width: '200px',margin: "10px"}}>
-                <Card.Img variant="top" src={item.strCategoryThumb} />
+                
                 <Card.Body>
-                    <Card.Title>{item.strCategory}</Card.Title>
-                    <Card.Text>{item.strCategoryDescription.substr(0,50)}</Card.Text>
+                    <Card.Title>{item.ar_category_name}</Card.Title>
                 <Link to={"/menue"}>
                 <Button variant="warning" onClick={()=>filterFunction(item.strCategory)}>Explore Menue</Button>
                 </Link>
