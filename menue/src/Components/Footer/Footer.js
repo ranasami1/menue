@@ -1,17 +1,19 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faFacebook,faXTwitter,faYoutube} from '@fortawesome/free-brands-svg-icons'
 import './footer.css';
 
 export default function Footer() {
   return (
-    <footer className ="d-flex align-items-center flex-column">
-        <div className='container'>
-        <h2>Contact Us</h2>
-
-        <a href='https://x.com/RolllandsCoffe?fbclid=IwAR1SJrG0QjNi4SzkBblHTZv0cJs-ifBHA1g95og47IcwjE9EDWkY7DOC-24'><FontAwesomeIcon icon="fa-brands fa-twitter" /></a>
-        <a href='https://www.facebook.com/RolllandsCoffe'><FontAwesomeIcon icon="fa-brands fa-facebook" /></a>
-        <a href='https://www.youtube.com/channel/UCRST_Si9jDyE-5WQ7_6HnkA'><FontAwesomeIcon icon="fa-brands fa-youtube" /></a>
-        
+    <footer>
+        <div className='container d-flex' id="contact">
+        <h4>Contact Us</h4>
+        <div className='d-flex'>
+        <a href='https://x.com/RolllandsCoffe?fbclid=IwAR1SJrG0QjNi4SzkBblHTZv0cJs-ifBHA1g95og47IcwjE9EDWkY7DOC-24'><FontAwesomeIcon icon={faXTwitter} /></a>
+        <a href='https://www.facebook.com/RolllandsCoffe'><FontAwesomeIcon icon={faFacebook} /></a>
+        <a href='https://www.youtube.com/channel/UCRST_Si9jDyE-5WQ7_6HnkA'><FontAwesomeIcon icon={faYoutube} /></a>
+        <a href='tel:+966590968866'>+966 59 096 8866</a>
+        </div>
         </div>
     </footer>
   )

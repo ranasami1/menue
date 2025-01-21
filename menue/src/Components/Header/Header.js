@@ -11,10 +11,9 @@ function Header() {
         <Container>
         <Navbar.Brand href="/"><img src={logo} style={{maxWidth:"180px"}}></img></Navbar.Brand>
         <Nav className="ms-auto">
-  <Nav.Link href="/" className="custom-link">Menue</Nav.Link>
-  <Nav.Link href="#contact" className="custom-link">ContactUs</Nav.Link>
-</Nav>
-
+        <Nav.Link href="/" className="custom-link">Menue</Nav.Link>
+        <Nav.Link href="#contact" className="custom-link">ContactUs</Nav.Link>
+        </Nav>
         </Container>
       </Navbar>
   );
