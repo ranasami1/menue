@@ -13,7 +13,7 @@ function App() {
   let [meal,setMeal] = useState()
   
   function Categories(){
-    axios.get('http://localhost:3000/items.json')
+    axios.get('https://rolllandscoffee.com/rjs/items.json')
     .then ((res)=>setMeal(res.data))
     console.log(meal);
 }
