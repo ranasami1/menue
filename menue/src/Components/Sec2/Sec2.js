@@ -25,7 +25,7 @@ export function Sec2(){
         <div className='category'>
             {loading?<Spiner/>:meal.slice(0,12).map((item,key)=>{
                 return(
-                <Card key={key} style={{ width: '18rem',margin: "10px"}}>
+                <Card key={key} style={{ width: '200px',margin: "10px"}}>
                 <Card.Img variant="top" src={item.strCategoryThumb} />
                 <Card.Body>
                     <Card.Title>{item.strCategory}</Card.Title>
