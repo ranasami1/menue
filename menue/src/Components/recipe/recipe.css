@@ -6,7 +6,7 @@
     position: fixed;
 }
 .container-recipe .recipe{
-    background-color:hsla(220, 5%, 23%, 0.781);
+    background-color:black;
     max-width: 500px;
     height: 500px;
     color:var(--mainText);
