@@ -38,7 +38,7 @@ const handleButtonClick = () => {
   }
 };
   return (
-    <div className="App">
+    <div className="App" style={{height:"auto"}}>
     <Header/>
     <AppContext.Provider value={{filterFunction,loading,setLoading,
       cat,mealName,mealN,isVisible,setIsVisible,handleButtonClick,menu,setMenu}}>

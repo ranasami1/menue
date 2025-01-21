@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import './Sec2.css';
 import { Link } from 'react-router-dom';
 import { Spiner } from '../spinner/spinner';
 import  { AppContext } from "../../App";
@@ -11,28 +10,27 @@ export function Sec2(){
     const [meal,setMeal] = useState()
 
     function Categories(){
-    axios.get('https://rolllandscoffee.com/rjs/items.json')
-    .then ((res)=>setMeal(res.data[0]))
+    axios.get('http://localhost:3000/items.json')
+    .then ((res)=>setMeal(res.data))
     console.log(meal);
 }
     useEffect(() =>{
         Categories();
     },[])
     return(
-       <div className='Container'>
+       <div>
         <h1 className='title tracking-in-expand'>Categories</h1>
-        <div className='category d-flex'>
-            {loading?<Spiner/>:meal.map((item,key)=>{
+        <div className='container d-flex flex-wrap justify-content-center align-items-center gap-4 p-5'>
+            {meal?.map((item,key)=>{
                 return(
-                <Card key={key} style={{ width: '200px',margin: "10px"}}>
-                
-                <Card.Body>
-                    <Card.Title>{item.ar_category_name}</Card.Title>
-                <Link to={"/menue"}>
-                <Button variant="warning" onClick={()=>filterFunction(item.strCategory)}>Explore Menue</Button>
-                </Link>
-                </Card.Body>
-                </Card>
+                    <Card key={key} style={{maxWidth:"250px"}}>
+                    <Card.Img variant="top" src={item.items.details[0].image} style={{height:"200px"}} />
+                    <Card.Body>
+                      <Card.Title>{item.en_category_name}</Card.Title>
+
+                      <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                  </Card>
                 )
             })}
         </div>   
