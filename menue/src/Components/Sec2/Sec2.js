@@ -22,7 +22,7 @@ export function Sec2(){
     return(
        <div className='Container'>
         <h1 className='title tracking-in-expand'>Categories</h1>
-        <div className='category'>
+        <div className='category d-flex'>
             {loading?<Spiner/>:meal.slice(0,12).map((item,key)=>{
                 return(
                 <Card key={key} style={{ width: '200px',margin: "10px"}}>

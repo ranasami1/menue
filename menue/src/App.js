@@ -5,6 +5,8 @@ import { Home } from './Components/Home/Home';
 import { Menue } from './Components/Menue/Menue';
 import { useState,createContext} from 'react';
 import axios from 'axios';
+import Footer from './Components/Footer/Footer';
+
 export const AppContext = createContext();
 function App() {
   const [cat,setCat] = useState("Beef");
@@ -47,6 +49,7 @@ const handleButtonClick = () => {
          </Routes>
     </Router>
     </AppContext.Provider>
+    <Footer/>
     </div>
   );
 }
