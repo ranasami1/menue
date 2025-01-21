@@ -7,17 +7,16 @@ import "./Header.css"
 import '../Header/Header.css';
 function Header() {
   return (
-    <>
-      <Navbar className='Navbar' bg="black" data-bs-theme="dark">
+      <Navbar bg="black" className='Navbar' data-bs-theme="warning">
         <Container>
-          <Navbar.Brand href="/"><img src={logo} style={{maxHeight:"90px"}}></img></Navbar.Brand>
-          <Nav>
-            <Nav.Link href="/">Menue</Nav.Link>
-            <Nav.Link href="/aboutus">Contact Us</Nav.Link>
-          </Nav>
+        <Navbar.Brand href="/"><img src={logo} style={{maxWidth:"180px"}}></img></Navbar.Brand>
+        <Nav className="ms-auto">
+  <Nav.Link href="/" className="custom-link">Menue</Nav.Link>
+  <Nav.Link href="#contact" className="custom-link">ContactUs</Nav.Link>
+</Nav>
+
         </Container>
       </Navbar>
-     </>
   );
 }
 

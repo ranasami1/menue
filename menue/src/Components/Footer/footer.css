@@ -3,5 +3,8 @@ footer{
     height: auto;
 }
 a{
-    color: black;
+    color: black !important;
+   display:inline-block;
+    text-decoration: none !important;
+    font-size: 20px;
 }
