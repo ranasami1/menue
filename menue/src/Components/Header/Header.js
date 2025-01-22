@@ -18,7 +18,7 @@ function Header() {
         <Nav.Link href="/" className="custom-link">{t("Categories")}</Nav.Link>
         {lng === "en"?
         <Button variant="warning" onClick={()=>{i18next.changeLanguage("ar")
-        }}>ar</Button>:<Button variant="warning" onClick={()=>{i18next.changeLanguage("en")
+        }}>العربية</Button>:<Button variant="warning" onClick={()=>{i18next.changeLanguage("en")
         }}>en</Button>}
         </Nav>
         </Container>
