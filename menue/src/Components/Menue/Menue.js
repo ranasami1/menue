@@ -14,7 +14,7 @@ export function Menue(){
                 {retrievedObject?retrievedObject.items?.details?.map((item,key)=>{
                     return(
                         <Card key={key} style={{ width: '15rem',margin: "10px"}}>
-                            <Card.Img variant="top" src={item.image} />
+                            <Card.Img src={item.image} style={{ maxHeight: '250px' }} />
                             <Card.Body>
                                 <Card.Title>{item.en_name}</Card.Title>
                                <div className='d-flex justify-content-between'>
