@@ -3,11 +3,14 @@ footer{
     height: auto;
     position: relative;
     bottom: 0;
-    width: 100%;
 }
-a{
+footer a{
     color: black !important;
    display:block;
     text-decoration: none !important;
     font-size: 20px;
+}
+footer p{
+ margin: 0 !important;
+ font-weight: bold;
 }

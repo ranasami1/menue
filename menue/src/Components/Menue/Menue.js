@@ -13,13 +13,13 @@ export function Menue(){
             <div className="container-fluid d-flex gap-3 align-items-center justify-content-center flex-wrap p-5">
                 {retrievedObject?retrievedObject.items?.details?.map((item,key)=>{
                     return(
-                        <Card key={key} style={{ margin:"10px 0"}} className='card'>
+                        <Card key={key} style={{ margin:"10px 0"}}>
                             <Card.Img src={item.image} style={{ maxHeight: '230px' }} />
                             <Card.Body>
                                 <Card.Title>{item.en_name}</Card.Title>
                                <div className='d-flex justify-content-between'>
-                                <p style={{backgroundColor:"red",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold"}}>{item.price} SAR</p>
-                                <p style={{backgroundColor:"green",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold"}}>{item.calories} Calories</p>
+                                <p style={{backgroundColor:"red",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold",margin: '0 20px'}}>{item.price} SAR</p>
+                                <p style={{backgroundColor:"green",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold",margin: '0 20px'}}>{item.calories} Calories</p>
                                </div>
                             </Card.Body>
                         </Card>
