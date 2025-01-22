@@ -22,7 +22,7 @@ export function Menue(){
                                 <Card.Title>{lng=="en"?item.en_name:item.ar_name}</Card.Title>
                                <div className='d-flex justify-content-between'>
                                 <p style={{backgroundColor:"red",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold",margin: '0 20px'}}>{lng == "ar" ? `${item.price} ${t("SAR")}` : `${t("SAR")} ${item.price}`}</p>
-                                <p style={{backgroundColor:"green",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold",margin: '0 20px'}}>{lng == "ar" ? `${item.calories} ${t("Calories")}` : `${t("Calories")} ${item.calories}`}
+                                <p style={{backgroundColor:"green",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold",margin: '0 20px'}}>{lng == "ar" ? `${item.calories} ${t("Calories")}` :`${t("Calories")} ${item.calories}`}
                                 </p>
                                </div>
                             </Card.Body>
