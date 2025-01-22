@@ -1,4 +1,6 @@
 import './App.css';
+import i18next from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 import Header from './Components/Header/Header';
 import { BrowserRouter as Router , Routes , Route} from 'react-router-dom';
 import { Home } from './Components/Home/Home';
@@ -6,8 +8,30 @@ import { Menue } from './Components/Menue/Menue';
 import { useState,createContext,useEffect} from 'react';
 import axios from 'axios';
 import Footer from './Components/Footer/Footer';
+import { initReactI18next, useTranslation } from 'react-i18next';
+import HttpApi from 'i18next-http-backend';
+import Cookies from 'js-cookie';
+
+
 export const AppContext = createContext();
+
+i18next.use(initReactI18next).use(LanguageDetector).use(HttpApi)
+.init({
+  lng:"ar",
+  fallbacklng:"en",
+  detection:{
+    order: ['cookie', 'htmlTag', 'sessionStorage', 'navigator', 'localStorage', 'path', 'subdomain'],
+    caches:['cookie'],
+  },
+  backend:{
+    loadPath: '/locale/{{lng}}/transilition.json',
+
+  }
+  
+})
+
 function App() {
+  let { t } = useTranslation();
   let [cat,setCat] = useState();
   let [menu,setMenu] = useState([]);
   let [meal,setMeal] = useState()
@@ -23,24 +47,27 @@ function Category(selectedCategory) {
   setMenu=localStorage.setItem("menue",selected);
 }
 
-
+const lng =Cookies.get("i18next"||"ar");
     useEffect(() =>{
         Categories();
-    },[])
+        window.document.dir = i18next.dir();
+    },[lng])
   
   return (
+    <AppContext.Provider value={{ cat, menu, setMenu, meal, Category,t,lng}}>
     <div className="App">
     <Header/>
-    <AppContext.Provider value={{ cat, menu, setMenu, meal, Category }}>
+    
     <Router>
       <Routes>      
         <Route path='/' element={<Home/>}/>
         <Route path='/menue' element={<Menue/>}/>
          </Routes>
     </Router>
-    </AppContext.Provider>
+
     <Footer/>
     </div>
+    </AppContext.Provider>
   );
 }
 

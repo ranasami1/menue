@@ -1,10 +1,13 @@
-import { useEffect, useState ,useContext} from 'react';
 import './Menue.css';
 import Card from 'react-bootstrap/Card';
 import {Spiner} from '../spinner/spinner';
-import  { AppContext } from "../../App";
+import { useTranslation } from 'react-i18next';
+import { useContext } from 'react';
+import { AppContext } from '../../App';
+
 export function Menue(){
-    const {cat,menu} = useContext(AppContext) ;
+    let {lng} = useContext(AppContext);
+    let {t} = useTranslation();
     const storedJsonString = localStorage.getItem("menue");
     const retrievedObject = JSON.parse(storedJsonString);
     return(
@@ -16,10 +19,10 @@ export function Menue(){
                         <Card key={key} style={{ margin:"10px 0"}}>
                             <Card.Img src={item.image} style={{ maxHeight: '230px' }} />
                             <Card.Body>
-                                <Card.Title>{item.en_name}</Card.Title>
+                                <Card.Title>{lng=="en"?item.en_name:item.ar_name}</Card.Title>
                                <div className='d-flex justify-content-between'>
-                                <p style={{backgroundColor:"red",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold",margin: '0 20px'}}>{item.price} SAR</p>
-                                <p style={{backgroundColor:"green",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold",margin: '0 20px'}}>{item.calories} Calories</p>
+                                <p style={{backgroundColor:"red",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold",margin: '0 20px'}}>{item.price} {t("SAR")}</p>
+                                <p style={{backgroundColor:"green",padding:"5px",borderRadius:"5px",color:"#ffff",fontWeight:"bold",margin: '0 20px'}}>{item.calories}{t("Calories")}</p>
                                </div>
                             </Card.Body>
                         </Card>
