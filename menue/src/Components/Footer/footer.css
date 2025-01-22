@@ -7,7 +7,7 @@ footer{
 }
 a{
     color: black !important;
-   display:inline-block;
+   display:block;
     text-decoration: none !important;
     font-size: 20px;
 }
