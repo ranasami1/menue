@@ -10,11 +10,11 @@ export function Menue(){
     return(
         <div className="menue">
             <h1 className='title tracking-in-expand'>{retrievedObject.en_category_name}</h1>
-            <div className="container">
+            <div className="container-fluid d-flex gap-3 align-items-center justify-content-center flex-wrap p-5">
                 {retrievedObject?retrievedObject.items?.details?.map((item,key)=>{
                     return(
-                        <Card key={key} style={{ width: '15rem',margin: "10px"}}>
-                            <Card.Img src={item.image} style={{ maxHeight: '250px' }} />
+                        <Card key={key} style={{ margin:"10px 0"}} className='card'>
+                            <Card.Img src={item.image} style={{ maxHeight: '230px' }} />
                             <Card.Body>
                                 <Card.Title>{item.en_name}</Card.Title>
                                <div className='d-flex justify-content-between'>

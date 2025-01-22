@@ -11,14 +11,14 @@ export function Sec2() {
     return (
       <div>
         <h2 className="title tracking-in-expand">Categories</h2>
-        <div className="container d-flex flex-wrap justify-content-center align-items-center gap-4 p-5">
+        <div className="container-fluid d-flex gap-3 align-items-center justify-content-center flex-wrap p-5">
           {meal ? (
             meal.map((category, key) => (
-              <Card key={key} style={{ maxWidth: '250px' }}>
+              <Card key={key}>
                 <Card.Img
                   variant="top"
                   src={category.items.details[0].image} // First item's image
-                  style={{ height: '200px' }}
+                  style={{maxHeight: '230px'}}
                 />
                 <Card.Body>
                   <Card.Title>{category.en_category_name}</Card.Title>
