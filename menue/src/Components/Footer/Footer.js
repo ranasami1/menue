@@ -11,7 +11,7 @@ export default function Footer() {
       <p>{t ("Prices include VAT")}</p>
       <p>{t("Adults need 2000 calories per day")}</p>
         <div className='container-fluid' id="contact">
-        <h4>{t("Contact Us")}</h4>
+        <h4 style={{fontWeight:"bold",margin:"10px 0 5px 0"}}>{t("Contact Us")}</h4>
         <div className='d-flex gap-4 align-items-center justify-content-center flex-wrap'>
         <a href='https://x.com/RolllandsCoffe?fbclid=IwAR1SJrG0QjNi4SzkBblHTZv0cJs-ifBHA1g95og47IcwjE9EDWkY7DOC-24' target='_blank'><FontAwesomeIcon icon={faXTwitter} /></a>
         <a href='https://www.facebook.com/RolllandsCoffe' target='_blank'><FontAwesomeIcon icon={faFacebook} /></a>
