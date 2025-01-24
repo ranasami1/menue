@@ -48,7 +48,7 @@ function Category(selectedCategory) {
   setMenu=localStorage.setItem("menue",selected);
 }
 
-const lng =Cookies.get("i18next"||"ar");
+const lng = Cookies.get("i18next");
     useEffect(() =>{
         Categories();
         window.document.dir = i18next.dir();
