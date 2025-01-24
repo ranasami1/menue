@@ -14,3 +14,7 @@ footer p{
  margin: 0 !important;
  font-weight: bold;
 }
+#phone{
+    direction: ltr;
+    unicode-bidi: embed;
+}
