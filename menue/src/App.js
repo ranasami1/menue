@@ -4,7 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import Header from './Components/Header/Header';
 import { BrowserRouter as Router , Routes , Route} from 'react-router-dom';
 import { Home } from './Components/Home/Home';
-import { Menue } from './Components/Menue/Menue';
+import { Menue } from './Components/Menue/Menu';
 import { useState,createContext,useEffect} from 'react';
 import axios from 'axios';
 import Footer from './Components/Footer/Footer';
