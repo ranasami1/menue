@@ -35,6 +35,7 @@ function App() {
   let [cat,setCat] = useState();
   let [menu,setMenu] = useState([]);
   let [meal,setMeal] = useState()
+  const [isArabic, setIsArabic] = useState(false);
   
   function Categories(){
     axios.get('https://rolllandscoffee.com/rjs/items.json')
@@ -51,11 +52,13 @@ const lng =Cookies.get("i18next"||"ar");
     useEffect(() =>{
         Categories();
         window.document.dir = i18next.dir();
+        if (lng === "ar") {
+          setIsArabic(true);
+        }
     },[lng])
-  
   return (
     <AppContext.Provider value={{ cat, menu, setMenu, meal, Category,t,lng}}>
-    <div className="App">
+    <div className={`App ${isArabic ? "arFont" : ""}`}>
     <Header/>
     
     <Router>

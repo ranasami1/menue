@@ -22,7 +22,7 @@ export function Sec2() {
                   style={{maxHeight: '230px'}}
                 />
                 <Card.Body>
-                  <Card.Title>{lng=="en"?category.en_category_name:category.ar_category_name}</Card.Title>
+                  <Card.Title>{lng === "en"?category.en_category_name:category.ar_category_name}</Card.Title>
                   <Link to="/menue">
                     <Button
                       variant="warning"
