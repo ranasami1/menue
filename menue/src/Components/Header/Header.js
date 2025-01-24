@@ -19,7 +19,7 @@ function Header() {
         {lng === "en"?
         <Button variant="warning" onClick={()=>{i18next.changeLanguage("ar")
         }}>العربية</Button>:<Button variant="warning" onClick={()=>{i18next.changeLanguage("en")
-        }}>en</Button>}
+        }}>English</Button>}
         </Nav>
         </Container>
       </Navbar>
