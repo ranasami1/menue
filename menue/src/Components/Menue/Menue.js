@@ -13,7 +13,7 @@ export function Menue(){
     return(
         <div className="menue">
             <h1 className='title tracking-in-expand'>{lng === "ar" ?retrievedObject.ar_category_name:retrievedObject.en_category_name}</h1>
-            <div className="container-fluid d-flex gap-3 align-items-center justify-content-center flex-wrap p-5">
+            <div className="container-fluid d-flex gap-3 align-items-center justify-content-center flex-wrap">
                 {retrievedObject?retrievedObject.items?.details?.map((item,key)=>{
                     return(
                         <Card key={key} style={{ margin:"10px 0"}}>

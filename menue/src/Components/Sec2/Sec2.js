@@ -12,7 +12,7 @@ export function Sec2() {
     return (
       <div>
         <h2 className="title tracking-in-expand">{t("Categories")}</h2>
-        <div className="container-fluid d-flex gap-3 align-items-center justify-content-center flex-wrap p-5">
+        <div className="container-fluid d-flex gap-3 align-items-center justify-content-center flex-wrap">
           {meal? (
             meal.map((category, key) => (
               <Card key={key}>
