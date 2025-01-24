@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 export default function Footer() {
   let { t } = useTranslation();
   return (
-    <footer className='mt-2'>
+    <footer className='mt-2 py-4'>
       <p>{t ("Prices include VAT")}</p>
       <p>{t("Adults need 2000 calories per day")}</p>
         <div className='container-fluid' id="contact">
