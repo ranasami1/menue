@@ -23,12 +23,12 @@ export function Sec2() {
                 />
                 <Card.Body>
                   <Card.Title>{lng === "en"?category.en_category_name:category.ar_category_name}</Card.Title>
-                  <Link to="/menue">
+                  <Link to="/menu">
                     <Button
                       variant="warning"
                       onClick={() => Category(category)} // Pass category object
                     >
-                      {t("Menue")}
+                      {t("Menu")}
                     </Button>
                   </Link>
                 </Card.Body>

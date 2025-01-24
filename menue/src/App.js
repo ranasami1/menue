@@ -24,7 +24,7 @@ i18next.use(initReactI18next).use(LanguageDetector).use(HttpApi)
     caches:['cookie'],
   },
   backend:{
-    loadPath: '/locale/{{lng}}/transilition.json',
+    loadPath: `/locale/{{lng}}/transilition.json`,
 
   }
   
@@ -64,7 +64,7 @@ const lng =Cookies.get("i18next"||"ar");
     <Router>
       <Routes>      
         <Route path='/' element={<Home/>}/>
-        <Route path='/menue' element={<Menue/>}/>
+        <Route path='/menu' element={<Menue/>}/>
          </Routes>
     </Router>
 
