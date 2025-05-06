@@ -17,8 +17,6 @@ export const AppContext = createContext();
 
 i18next.use(initReactI18next).use(LanguageDetector).use(HttpApi)
 .init({
-  lng:"ar",
-  fallbacklng:"en",
   detection:{
     order: ['cookie', 'htmlTag', 'sessionStorage', 'navigator', 'localStorage', 'path', 'subdomain'],
     caches:['cookie'],
